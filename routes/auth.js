@@ -15,7 +15,7 @@ router.post('/facebook', function(req, res) {
   var params = {
     code: req.body.code,
     client_id: req.body.clientId,
-    client_secret: '9039f07cda30be775c84be0c6367ed97',
+    client_secret: process.env.FACEBOOK_SECRET,
     redirect_uri: req.body.redirectUri
   };
 
@@ -79,7 +79,7 @@ router.post('/google', function(req, res) {
   var params = {
     code: req.body.code,
     client_id: req.body.clientId,
-    client_secret: 'dVn261w2L2f8omsgnzpOfe3r',
+    client_secret: process.env.GOOGLE_SECRET,
     redirect_uri: req.body.redirectUri,
     grant_type: 'authorization_code'
   };
@@ -145,7 +145,7 @@ router.post('/github', function(req, res) {
   var params = {
     code: req.body.code,
     client_id: req.body.clientId,
-    client_secret: '101434c755dbb7507e47739f88bde0c651197091',
+    client_secret: process.env.GITHUB_SECRET,
     redirect_uri: req.body.redirectUri
   };
 
