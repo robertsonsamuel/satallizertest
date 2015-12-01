@@ -12,5 +12,5 @@ bower intall
 
 navigate to 
 ```
-http://localhost:300;
+http://localhost:3000;
 ```
