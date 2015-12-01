@@ -5,6 +5,7 @@ var moment = require('moment');
 
 function ensureAuthenticated(req, res, next) {
   if (!req.headers.authorization) {
+    console.log(req.headers);
     return res.status(401).send({ message: 'Please make sure your request has an Authorization header' });
   }
   var token = req.headers.authorization.split(' ')[1];

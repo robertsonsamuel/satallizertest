@@ -1,0 +1,24 @@
+<div ui-view>
+  <div class="col-md-12">
+    <div ng-controller="navCtrl">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img src="http://vignette3.wikia.nocookie.net/mlp/images/6/64/Animated_fire_icon.gif/revision/latest?cb=20140615052145" height="25" width="25">
+              </a>
+              <ul class="nav navbar-nav navbar-left">
+                <li><a ui-sref="about">About</a></li>
+                <li ng-if="!isAuthenticated()"><a ui-sref="login">Sign In</a></li>
+              </ul>
+              <ul ng-if="isAuthenticated()" class="nav navbar-nav navbar-right">
+                <li><a ng-click="logout()">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+<h1>About</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem temporibus explicabo ducimus odio cum necessitatibus voluptas iure fuga non odit nesciunt ab ipsum, nostrum quo dolorem amet molestias id optio asperiores velit libero possimus?</p>
+
+</div>

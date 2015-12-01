@@ -21,6 +21,10 @@ app.set('view engine', 'html');
 
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
+app.use('/user', require('./routes/users'));
+app.use('/threads', require('./routes/threads'));
+app.use('/coolpool', require('./routes/thecoolpool'));
+
 
 // app.use(function  (req,res) {
 //   res.status(404).render('404');
